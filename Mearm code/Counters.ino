@@ -1,20 +1,19 @@
 void leftyCount(){
   leftyS = analogRead(A1);
-  //Serial.println(leftyS);
   if (leftyS >= 300 && leftyS < 600){
-    lefty = lefty + 1;
-    digitalWrite(led1, HIGH);
-  }
-  else if (leftyS < 300){
-    lefty = lefty + 5;
-    digitalWrite(led1, HIGH);
-  }
-  else if (leftyS > 900 && leftyS <= 1000){
     lefty = lefty - 1;
     digitalWrite(led1, HIGH);
   }
-  else if (leftyS > 1000){
+  else if (leftyS < 300){
     lefty = lefty - 5;
+    digitalWrite(led1, HIGH);
+  }
+  else if (leftyS > 900 && leftyS <= 1000){
+    lefty = lefty + 1;
+    digitalWrite(led1, HIGH);
+  }
+  else if (leftyS > 1000){
+    lefty = lefty + 5;
     digitalWrite(led1, HIGH);
   }
   else{
@@ -30,22 +29,20 @@ void leftyCount(){
 
 void leftxCount(){
   leftxS = analogRead(A0);
-  //Serial.println(leftxS);
-  //Serial.println(leftx);
   if (leftxS >= 300 && leftxS < 600){
-    leftx = leftx - 1;
-    digitalWrite(led2, HIGH);
-  }
-  else if (leftxS < 300){
-    leftx = leftx - 5;
-    digitalWrite(led2, HIGH);
-  }
-  else if (leftxS > 900 && leftxS <= 1000){
     leftx = leftx + 1;
     digitalWrite(led2, HIGH);
   }
-  else if (leftxS > 1000){
+  else if (leftxS < 300){
     leftx = leftx + 5;
+    digitalWrite(led2, HIGH);
+  }
+  else if (leftxS > 900 && leftxS <= 1000){
+    leftx = leftx - 1;
+    digitalWrite(led2, HIGH);
+  }
+  else if (leftxS > 1000){
+    leftx = leftx - 5;
     digitalWrite(led2, HIGH);
   }
   else{
@@ -61,23 +58,21 @@ void leftxCount(){
 
 void rightyCount(){
   rightyS = analogRead(A2);
-  //Serial.println(leftxS);
-  //Serial.println(leftx);
   if (rightyS >= 300 && rightyS < 600){
-    righty = righty + 1;
+    righty = righty - 1;
     digitalWrite(led3, HIGH);
   }
   else if (rightyS < 300){
-    righty = righty + 5;
+    righty = righty - 5;
     digitalWrite(led3, HIGH);
   }
   else if (rightyS > 
   900 && rightyS <= 1000){
-    righty = righty - 1;
+    righty = righty + 1;
     digitalWrite(led3, HIGH);
   }
   else if (rightyS > 1000){
-    righty = righty - 5;
+    righty = righty + 5;
     digitalWrite(led3, HIGH);
   }
   else{
@@ -93,22 +88,20 @@ void rightyCount(){
 
 void rightxCount(){
   rightxS = analogRead(A3);
-  //Serial.println(leftxS);
-  //Serial.println(leftx);
   if (rightxS >= 300 && rightxS < 600){
-    rightx = rightx - 1;
-    digitalWrite(led4, HIGH);
-  }
-  else if (rightxS < 300){
-    rightx = rightx - 5;
-    digitalWrite(led4, HIGH);
-  }
-  else if (rightxS > 900 && rightxS <= 1000){
     rightx = rightx + 1;
     digitalWrite(led4, HIGH);
   }
-  else if (rightxS > 1000){
+  else if (rightxS < 300){
     rightx = rightx + 5;
+    digitalWrite(led4, HIGH);
+  }
+  else if (rightxS > 900 && rightxS <= 1000){
+    rightx = rightx - 1;
+    digitalWrite(led4, HIGH);
+  }
+  else if (rightxS > 1000){
+    rightx = rightx - 5;
     digitalWrite(led4, HIGH);
   }
   else{
